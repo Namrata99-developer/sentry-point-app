@@ -19,7 +19,7 @@
 
 By using geospatial data and privacy-preserving algorithms, we empower users to choose safer routes and provide urban planners with high-density data for infrastructure improvement.
 
----
+
 
 ## ✨ Key Features
 
@@ -39,7 +39,6 @@ To protect user identity and prevent tracking, we implemented a **$k$-anonymity 
 ### 📊 Public Safety Dashboard
 * An aggregated analytical view for community leaders to identify high-severity areas and plan data-driven interventions like improved street lighting or patrols.
 
----
 
 ## 🛠️ Tech Stack
 
@@ -50,7 +49,6 @@ To protect user identity and prevent tracking, we implemented a **$k$-anonymity 
 | **Database** | Supabase (PostgreSQL) |
 | **Deployment** | Vercel (Frontend), Render (Backend) |
 
----
 
 ## 📂 Project Structure
 

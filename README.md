@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="sentrypoint-web/public/logo512.png" alt="Sentry Point Logo" width="120" height="120" />
+  <h1>Sentry Point</h1>
+  <p><b>Anonymous Incident Reporting & Safety Mapping System</b></p>
+  <p><i>Turning community fear into actionable community data.</i></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <a href="https://sentry-point-app.vercel.app/">
+    <img src="https://img.shields.io/badge/Demo-Live_on_Vercel-brightgreen?style=for-the-badge&logo=vercel" alt="Live Demo" />
+  </a>
+  <a href="https://www.loom.com/share/a001ff4aa78542e5a7316c78d2cef0b9">
+    <img src="https://img.shields.io/badge/Video-Pitch_%26_Demo-red?style=for-the-badge&logo=youtube" alt="Pitch Video" />
+  </a>
+</div>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Overview
+**Sentry Point** is a privacy-centric safety application designed for the **Elite Her** hackathon. It bridges the gap between perceived public safety and official crime statistics by allowing citizens to anonymously report incidents like harassment, poor lighting, or suspicious activity. 
 
-### `npm start`
+By using geospatial data and privacy-preserving algorithms, we empower users to choose safer routes and provide urban planners with high-density data for infrastructure improvement.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features
 
-### `npm test`
+### 🛡️ Privacy-First: $k$-Anonymity Logic
+To protect user identity and prevent tracking, we implemented a **$k$-anonymity model ($k=3$)**. 
+* A single report will **not** appear on the public map immediately.
+* A marker only populates once **3 independent reports** are logged in the same vicinity.
+* This ensures data integrity and prevents the system from being used to monitor individual movement.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📍 Dual-Mode Reporting
+* **Real-Time GPS:** For immediate safety concerns, users can use a one-tap GPS feature to tag their current coordinates.
+* **Manual Retrospective Reporting:** Users can wait until they are safely home to manually select a location on the map, ensuring they aren't distracted while in a high-risk area.
 
-### `npm run build`
+### ⏳ 365-Day Temporal Slider
+* Safety isn't static. Our interactive slider allows users to filter reports by time, visualizing how safety "hotspots" change over the course of a year.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📊 Public Safety Dashboard
+* An aggregated analytical view for community leaders to identify high-severity areas and plan data-driven interventions like improved street lighting or patrols.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | React.js, Tailwind CSS, Leaflet.js (Maps) |
+| **Backend** | Python (FastAPI) |
+| **Database** | Supabase (PostgreSQL) |
+| **Deployment** | Vercel (Frontend), Render (Backend) |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+├── SentryPoint_Backend/   # FastAPI Python Server & Privacy Logic
+├── sentrypoint-web/       # React Frontend & Mapping Interface
+│   ├── public/            # Icons & Branding Assets
+│   └── src/               # UI Components & Map Logic
+└── README.md              # Documentation
